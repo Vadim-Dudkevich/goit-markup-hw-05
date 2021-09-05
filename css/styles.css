@@ -470,13 +470,11 @@ img {
   border-radius: 50%;
   background-color: #ffffff;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-icon {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-item:not(:last-child) {
@@ -487,11 +485,13 @@ img {
 }
 
 .socials-link:hover,
-.socials-link:focus,
+.socials-link:focus {
+  background-color: var(--akcent-text-color);
+}
+
 .socials-link:hover .socials-icon,
 .socials-link:focus .socials-icon {
   fill: var(--white-text-color);
-  background-color: var(--akcent-text-color);
 }
 
 /* ======================= CLIENTS ========================= */
@@ -531,13 +531,20 @@ img {
 
   fill: #afb1b8;
 
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
 .clients-link:focus {
   border-color: var(--akcent-text-color);
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
   fill: var(--akcent-text-color);
 }
 
@@ -632,7 +639,8 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-item-link:hover .portfolio-overlay-text {
+.portfolio-item-link:hover .portfolio-overlay-text,
+.portfolio-item-link:focus .portfolio-overlay-text {
   transform: translateY(0);
 }
 
@@ -670,8 +678,8 @@ img {
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .filter-button:hover,
@@ -679,8 +687,7 @@ img {
   color: var(--white-text-color);
   background-color: var(--akcent-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+    0px 2px 2px rgba(0, 0, 0, 0.12)
   display: block;
 }
 
@@ -845,6 +852,21 @@ img {
   background-color: unset;
   border-radius: 50%;
   cursor: pointer;
+  
+}
+
+.btn-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover,
+.btn:focus {
+  fill: var(--akcent-text-color);
+}
+
+.btn:hover .btn-icon,
+.btn:focus .btn-icon {
+  fill: var(--akcent-text-color);
 }
 
 .backdrop.is-hidden {
